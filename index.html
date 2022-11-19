@@ -12,5 +12,55 @@
         <button x-on:click="getData">Send get request</button>
         Data returned: <strong x-text="responsedata">Placeholder</strong>
     </div>
+    <div x-data="{
+        responsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/LightsaberColor')).json();
+        }
+    }">
+        <button x-on:click="getData">Send get request</button>
+        Data returned: <strong x-text="responsedata">Placeholder</strong>
+    </div>
+    <div x-data="{
+        responsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/Birthplace')).json();
+        }
+    }">
+        <button x-on:click="getData">Send get request</button>
+        Data returned: <strong x-text="responsedata">Placeholder</strong>
+    </div>
+    <div x-data="{
+        responsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/Rank')).json();
+        }
+    }">
+        <button x-on:click="getData">Send get request</button>
+        Data returned: <strong x-text="responsedata">Placeholder</strong>
+    </div>
+    <div x-data="{
+        responsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/Ship')).json();
+        }
+    }">
+        <button x-on:click="getData">Send get request</button>
+        Data returned: <strong x-text="responsedata">Placeholder</strong>
+    </div>
+    <div x-data="{
+        responsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/All')).json();
+            .then(data => players = data)">
+    <template x-for="ply in players" :key="index">
+        <li x-text="ply.name"></li>
+    </template>
+        }
+    }">
+        <button x-on:click="getData">Send get request</button>
+        Data returned: <strong x-text="">Placeholder</strong>
+    </div>
+
 </body>
 </html>
