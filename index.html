@@ -64,22 +64,22 @@
 <div
     x-data="{
         responsedata: null,
-        Star_Wars_Character: null,
-        Lightsaber_Color: null,
-        Birthplace: null,
-        Species: null,
-        Rank: null,
-        Ship: null,
-        async Createyourownpost() {
+        star_wars_character: null,
+        lightsaber_color: null,
+        birthplace: null,
+        species: null,
+        rank: null,
+        ship: null,
+        async createyourownpost() {
             this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/CreateYourOwn', {
               method: 'POST',
               body: JSON.stringify({
-                    Star_Wars_Character: this.Star_Wars_Character,
-                    Lightsaber_Color: this.Lightsaber_Color,
-                    Birthplace: this.Birthplace,
-                    Species: this.Species,
-                    Rank: this.Rank,
-                    Ship: this.Ship
+                    star_wars_character: this.star_wars_character,
+                    lightsaber_color: this.lightsaber_color,
+                    birthplace: this.birthplace,
+                    species: this.species,
+                    rank: this.sank,
+                    ship: this.ship
               }),
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -90,35 +90,35 @@
     }">
     <div>
         <label> Name of your Character:</label>
-        <input type="text" x-model="Star_Wars_Character"/>
+        <input type="text" x-model="star_wars_character"/>
     </div>
     <div>
         <label> LightSaber_Color:</label>
-        <input type="text" x-model="Lightsaber_Color"/>
+        <input type="text" x-model="lightsaber_color"/>
     </div>
     <div>
         <label> Birthplace:</label>
-        <input type="text" x-model="Birthplace"/>
+        <input type="text" x-model="birthplace"/>
     </div>
     <div>
         <label> Species:</label>
-        <input type="text" x-model="Species"/>
+        <input type="text" x-model="species"/>
     </div>
     <div>
         <label> Rank:</label>
-        <input type="text" x-model="Rank"/>
+        <input type="text" x-model="rank"/>
     </div>
     <div>
         <label> Ship:</label>
-        <input type="text" x-model="Ship"/>
+        <input type="text" x-model="ship"/>
     </div>
-    <button x-on:click="Createyourownpost">CharacterCreate</button>
-    <p>Chosen name of your character: <strong x-text="responsedata.Star_Wars_Character"></strong></p>
-    <p>Chosen color of the lightsaber: <strong x-text="responsedata.Lightsaber_Color"></strong></p>
-    <p>Chosen place of birth: <strong x-text="responsedata.Birthplace"></strong></p>
-    <p>Chosen species: <strong x-text="responsedata.Species"></strong></p>
-    <p>Chosen rank: <strong x-text="responsedata.Rank"></strong></p>
-    <p>Chosen type of ship or name of the ship: <strong x-text="responsedata.Ship"></strong></p>
+    <button x-on:click="createyourownpost">CharacterCreate</button>
+    <p>Chosen name of your character: <strong x-text="responsedata.star_wars_character"></strong></p>
+    <p>Chosen color of the lightsaber: <strong x-text="responsedata.lightsaber_color"></strong></p>
+    <p>Chosen place of birth: <strong x-text="responsedata.birthplace"></strong></p>
+    <p>Chosen species: <strong x-text="responsedata.species"></strong></p>
+    <p>Chosen rank: <strong x-text="responsedata.rank"></strong></p>
+    <p>Chosen type of ship or name of the ship: <strong x-text="responsedata.ship"></strong></p>
 
 </div>
 </body>
