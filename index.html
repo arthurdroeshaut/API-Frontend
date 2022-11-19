@@ -48,14 +48,48 @@
         <button x-on:click="getData">Send get request</button>
         What is the name of your ship of your ship type?: <strong x-text="responsedata">Placeholder</strong>
     </div>
-    <div x-data="{
-        resonsedata: null,
-        async getData() {
-            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/All')).json();
-        }
-    }">
-        <button x-on:click="getData">Create</button>
-        Create your own Character here!: <strong x-text="responsedata">Placeholder</strong>
+   <div
+    x-data="{
+        responsedata: null,
+        postname: null,
+        postmmr: null,
+        postlevel: null,
+        async createPost() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/CreateYourOwn', {
+              method: 'POST',
+              body: JSON.stringify({
+                    Charactername: This.PostName,
+                    LightSaberColor: This.PostLightsaberColor,
+                    Birthplace: This.PostBirthplace
+                    Species: This.PostSpecies,
+                    Rank: This.PostRank,
+                    Ship: This.Ship,
+              }),
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+            })).json();
+        },
+    }"
+
+>
+    <input placeholder="CharacterName" type="text" x-model="PostCharacterName">,
+    <input placeholder="LightSaberColor" type="number" x-model="PostLightSaberColor">,
+    <input placeholder="Birthplace" type="number" x-model="PostBirthplace">,
+    <input placeholder="Species" type="text" x-model="PostSpecies">
+    <input placeholder="Rank" type="number" x-model="PostRank">
+    <input placeholder="Rank" type="number" x-model="PostShip">
+        <button x-on:click="createPost">create</button>
+
+    <p>Chosen name of your character: <strong x-text="responsedata.name"></strong></p>
+    <p>Chosen color of the lightsaber: <strong x-text="responsedata.level"></strong></p>
+    <p>Chosen place of birth: <strong x-text="responsedata.level"></strong></p>
+    <p>Chosen species: <strong x-text="responsedata.level"></strong></p>
+    <p>Chosen rank: <strong x-text="responsedata.level"></strong></p>
+    <p>Chosen type of ship or name of the ship: <strong x-text="responsedata.level"></strong></p>
+
+</div>
+        </div>
     </div>
 </body>
 </html>
