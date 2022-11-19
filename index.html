@@ -1,4 +1,4 @@
-<html>
+<html xmlns:x-on="http://www.w3.org/1999/xhtml">
 <head>
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
@@ -112,7 +112,7 @@
         <label> Ship:</label>
         <input type="text" x-model="Ship"/>
     </div>
-        <button x-on:click="Createyourownpost">CharacterCreate</button>
+    <button x-on:click="Createyourownpost">CharacterCreate</button>
     </div>
     <p>Chosen name of your character: <strong x-text="responsedata.Star_Wars_Character"></strong></p>
     <p>Chosen color of the lightsaber: <strong x-text="responsedata.Lightsaber_Color"></strong></p>
