@@ -61,8 +61,7 @@
         What is the name of your ship or your ship type?: <strong x-text="responsedata">Placeholder</strong>
     </div>
     <h3> create your own Character!</h3>
-
-   <div
+<div
     x-data="{
         responsedata: null,
         Star_Wars_Character: null,
@@ -83,7 +82,7 @@
                     Ship: this.Ship
               }),
               headers: {
-                'Content-type': 'application/JSON; charset=UTF-8',
+                'Content-type': 'application/json; charset=UTF-8',
               },
             })).json();
         },
@@ -113,7 +112,6 @@
         <input type="text" x-model="Ship"/>
     </div>
     <button x-on:click="Createyourownpost">CharacterCreate</button>
-    </div>
     <p>Chosen name of your character: <strong x-text="responsedata.Star_Wars_Character"></strong></p>
     <p>Chosen color of the lightsaber: <strong x-text="responsedata.Lightsaber_Color"></strong></p>
     <p>Chosen place of birth: <strong x-text="responsedata.Birthplace"></strong></p>
@@ -121,7 +119,6 @@
     <p>Chosen rank: <strong x-text="responsedata.Rank"></strong></p>
     <p>Chosen type of ship or name of the ship: <strong x-text="responsedata.Ship"></strong></p>
 
-        </div>
-    </div>
+</div>
 </body>
 </html>
