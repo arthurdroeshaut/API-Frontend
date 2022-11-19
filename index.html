@@ -10,7 +10,7 @@
         }
     }">
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata">Placeholder</strong>
+        Name of your Character: <strong x-text="responsedata">Placeholder</strong>
     </div>
     <div x-data="{
         responsedata: null,
@@ -19,7 +19,7 @@
         }
     }">
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata">Placeholder</strong>
+        Colour of your Lightsaber?: <strong x-text="responsedata">Placeholder</strong>
     </div>
     <div x-data="{
         responsedata: null,
@@ -28,7 +28,7 @@
         }
     }">
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata">Placeholder</strong>
+        Your place of birth in the Star Wars universes?: <strong x-text="responsedata">Placeholder</strong>
     </div>
     <div x-data="{
         responsedata: null,
@@ -37,7 +37,7 @@
         }
     }">
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata">Placeholder</strong>
+        What is your rank? could be either a Jedi rank or a Sith rank.: <strong x-text="responsedata">Placeholder</strong>
     </div>
     <div x-data="{
         responsedata: null,
@@ -46,20 +46,7 @@
         }
     }">
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata">Placeholder</strong>
-    </div>
-    <div x-data="{
-        responsedata: null,
-        async getData() {
-            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/All')).json();
-            .then(data => players = data)">
-    <template x-for="ply in players" :key="index">
-        <li x-text="ply.name"></li>
-    </template>
-        }
-    }">
-        <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="">Placeholder</strong>
+        What is the name of your ship of your ship type?: <strong x-text="responsedata">Placeholder</strong>
     </div>
 
 </body>
