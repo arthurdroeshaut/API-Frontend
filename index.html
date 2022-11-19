@@ -48,6 +48,14 @@
         <button x-on:click="getData">Send get request</button>
         What is the name of your ship of your ship type?: <strong x-text="responsedata">Placeholder</strong>
     </div>
-
+    <div x-data="{
+        resonsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters/All')).json();
+        }
+    }">
+        <button x-on:click="getData">Create</button>
+        Create your own Character here!: <strong x-text="responsedata">Placeholder</strong>
+    </div>
 </body>
 </html>
