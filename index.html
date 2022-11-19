@@ -91,13 +91,19 @@
     }"
 
 >
-    <input placeholder="CharacterName" type="text" x-model="CharacterName">,
-    <input placeholder="LightSaberColor" type="text" x-model="LightSaberColor">,
-    <input placeholder="Birthplace" type="text" x-model="Birthplace">,
-    <input placeholder="Species" type="text" x-model="Species">
-    <input placeholder="Rank" type="text" x-model="Rank">
-    <input placeholder="Rank" type="text" x-model="Ship">
-        <button x-on:click="createPost">create</button>
+       <label> CharacterName:</label>
+           <input placeholder="CharacterName" type="text" x-model="CharacterName">
+       <label> LightSaberColor:</label>
+           <input placeholder="LightSaberColor" type="text" x-model="LightSaberColor">
+       <label> Birthplace:</label>
+           <input placeholder="Birthplace" type="text" x-model="Birthplace">
+       <label> Species:</label>
+           <input placeholder="Species" type="text" x-model="Species">
+       <label> Rank:</label>
+           <input placeholder="Rank" type="text" x-model="Rank">
+       <label> Ship:</label>
+           <input placeholder="Rank" type="text" x-model="Ship">
+       <button x-on:click="createPost">create</button>
 
     <h4>Charactername</h4>
     <p>Chosen name of your character: <strong x-text="responsedata.CharacterName"></strong></p>
