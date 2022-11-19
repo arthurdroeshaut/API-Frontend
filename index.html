@@ -75,8 +75,8 @@
             this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/CreateYourOwn', {
               method: 'POST',
               body: JSON.stringify({
-                    Star_Wars_Character: This.Charactername,
-                    Lightsaber_Color: This.Lightsabercolor,
+                    Star_Wars_Character: This.Star_Wars_Character,
+                    Lightsaber_Color: This.Lightsaber_Color,
                     Birthplace: This.Birthplace,
                     Species: This.Species,
                     Rank: This.Rank,
@@ -114,8 +114,8 @@
     </div>
         <button x-on:click="Createyourownpost">CharacterCreate</button>
     </div>
-    <p>Chosen name of your character: <strong x-text="responsedata.Charactername"></strong></p>
-    <p>Chosen color of the lightsaber: <strong x-text="responsedata.Lightsabercolor"></strong></p>
+    <p>Chosen name of your character: <strong x-text="responsedata.Star_Wars_Character"></strong></p>
+    <p>Chosen color of the lightsaber: <strong x-text="responsedata.Lightsaber_Color"></strong></p>
     <p>Chosen place of birth: <strong x-text="responsedata.Birthplace"></strong></p>
     <p>Chosen species: <strong x-text="responsedata.Species"></strong></p>
     <p>Chosen rank: <strong x-text="responsedata.Rank"></strong></p>
