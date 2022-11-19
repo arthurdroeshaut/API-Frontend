@@ -61,50 +61,59 @@
         What is the name of your ship or your ship type?: <strong x-text="responsedata">Placeholder</strong>
     </div>
     <h3> create your own Character!</h3>
-    <div>
 
    <div
     x-data="{
         responsedata: null,
-        CharacterName: null,
-        LightsaberColor: null,
+        Charactername: null,
+        Lightsabercolor: null,
         Birthplace: null,
         Species: null,
         Rank: null,
         Ship: null,
-        async createPost() {
+        async Createyourownpost() {
             this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/CreateYourOwn', {
               method: 'POST',
               body: JSON.stringify({
-                    CharacterName: This.PostName,
-                    LightSaberColor: This.PostLightsaberColor,
+                    CharacterName: This.Postname,
+                    LightSaberColor: This.PostLightsabercolor,
                     Birthplace: This.PostBirthplace
                     Species: This.PostSpecies,
                     Rank: This.PostRank,
-                    Ship: This.Ship,
+                    Ship: This.Ship
               }),
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               },
             })).json();
         },
-    }"
-
->
-       <label> CharacterName:</label>
-           <input placeholder="CharacterName" type="text" x-model="CharacterName">
-       <label> LightSaberColor:</label>
-           <input placeholder="LightSaberColor" type="text" x-model="LightSaberColor">
-       <label> Birthplace:</label>
-           <input placeholder="Birthplace" type="text" x-model="Birthplace">
-       <label> Species:</label>
-           <input placeholder="Species" type="text" x-model="Species">
-       <label> Rank:</label>
-           <input placeholder="Rank" type="text" x-model="Rank">
-       <label> Ship:</label>
-           <input placeholder="Rank" type="text" x-model="Ship">
-       <button x-on:click="createPost">create</button>
-
+    }">
+    <div>
+        <label> Charactername:</label>
+        <input type="text" x-model="Charactername"></input>
+    </div>
+    <div>
+        <label> LightSaberColor:</label>
+        <input type="text" x-model="Lightsabercolor"></input>
+    </div>
+    </div>
+        <label> Birthplace:</label>
+        <input type="text" x-model="Birthplace"></input>
+    </div>
+    <div>
+        <label> Species:</label>
+        <input type="text" x-model="Species"></input>
+    </div>
+    <div>
+        <label> Rank:</label>
+        <input type="text" x-model="Rank"></input>
+    </div>
+    <div>
+        <label> Ship:</label>
+        <input type="text" x-model="Ship"> </input>
+    </div>
+        <button x-on:click="Createyourownpost">CharacterCreate</button>
+    </div>
     <h4>Charactername</h4>
     <p>Chosen name of your character: <strong x-text="responsedata.CharacterName"></strong></p>
     <p>Chosen color of the lightsaber: <strong x-text="responsedata.LightSaberColor"></strong></p>
@@ -113,7 +122,6 @@
     <p>Chosen rank: <strong x-text="responsedata.Rank"></strong></p>
     <p>Chosen type of ship or name of the ship: <strong x-text="responsedata.Ship"></strong></p>
 
-   </div>
         </div>
     </div>
 </body>
