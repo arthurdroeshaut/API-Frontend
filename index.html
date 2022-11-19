@@ -2,6 +2,8 @@
 <head>
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
+    <h1> Welcome to the Star Wars API</h1>
+    <h2> First you can click on the send request button to get random values from the Star Wars universe.</h2>
 <body>
     <div x-data="{
         responsedata: null,
@@ -97,6 +99,7 @@
     <input placeholder="Rank" type="text" x-model="PostShip">
         <button x-on:click="createPost">create</button>
 
+    <h4>Charactername</h4>
     <p>Chosen name of your character: <strong x-text="responsedata.CharacterName"></strong></p>
     <p>Chosen color of the lightsaber: <strong x-text="responsedata.LightSaberColor"></strong></p>
     <p>Chosen place of birth: <strong x-text="responsedata.Birthplace"></strong></p>
