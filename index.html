@@ -75,11 +75,11 @@
             this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/CreateYourOwn', {
               method: 'POST',
               body: JSON.stringify({
-                    CharacterName: This.Postname,
-                    LightSaberColor: This.PostLightsabercolor,
-                    Birthplace: This.PostBirthplace
-                    Species: This.PostSpecies,
-                    Rank: This.PostRank,
+                    Charactername: This.Charactername,
+                    Lightsabercolor: This.Lightsabercolor,
+                    Birthplace: This.Birthplace,
+                    Species: This.Species,
+                    Rank: This.Rank,
                     Ship: This.Ship
               }),
               headers: {
