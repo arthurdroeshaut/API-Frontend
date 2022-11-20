@@ -4,7 +4,7 @@ body {
   margin: 0;
   align-content: center;
   background-image: url('StarWars.png');
-  color: FFE81F;
+  color: chartreuse ;
   text-align: left;
   border-width: medium;
   font-family: sans-serif;
@@ -12,7 +12,7 @@ body {
   text-shadow: 1px 1px 1px #aaa;
 }
 h1 {
-  color: FFE81F;
+  color: chartreuse;
   text-align: center;
   border: darkblue;
 }
