@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: chartreuse;
+}
+h1 {
+  color: chartreuse;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}

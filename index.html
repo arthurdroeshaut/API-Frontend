@@ -1,11 +1,14 @@
 <html>
 <head>
+    <link rel="stylesheet" href="StarWars.css">
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
+    <script src="StarWars.js"></script>
 </head>
     <h1> Welcome to the Star Wars API</h1>
     <h2> First you can click on the send request button to get random values from the Star Wars universe.</h2>
 <body>
-    <div x-data="{
+
+        <div x-data="{
         responsedata: null,
         async getData() {
             this.responsedata = await (await fetch('https://randomizer-service-arthurdroeshaut.cloud.okteto.net/StarWars/Characters')).json();
