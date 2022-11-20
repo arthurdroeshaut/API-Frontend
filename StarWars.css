@@ -16,13 +16,3 @@ h1 {
   text-align: center;
   border: darkblue;
 }
-
-
-
-.star {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	background-color: #fff;
-	z-index: 2;
-}
