@@ -1,18 +1,22 @@
-
-
 body {
-  margin: 0;
-  align-content: center;
-  background-image: url('StarWars.png');
-  color: chartreuse ;
-  text-align: left;
-  border-width: medium;
-  font-family: sans-serif;
-  font-size: 16px;
-  text-shadow: 1px 1px 1px #aaa;
+  background-image: url("../img/star-wars-bg.jpg");
+  background-size: cover;
+  color: white;
+  font-family: Arial, sans-serif;
 }
-h1 {
-  color: chartreuse;
+
+h1, h2 {
   text-align: center;
-  border: darkblue;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+pre {
+  background-color: #444;
+  color: #eee;
+  padding: 10px;
 }
